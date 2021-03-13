@@ -20,14 +20,21 @@ const items = [
         label: "Brawlhalla",
         icon: resolve(__dirname, "..", "assets", "iconBrawlhalla.png"),
         click: () => {
-            spawn('"C:\\Program Files (x86)\\Steam\\Steam.exe"', ['-applaunch', '291550'], { shell: true })
+            spawn('"C:\\Program Files (x86)\\Steam\\Steam.exe"', ['-applaunch', '291550'], { shell: true });
         }
     },
     {
         label: "Farm Together",
         icon: resolve(__dirname, "..", "assets", "iconFarmTogether.png"),
         click: () => {
-            spawn('"D:\\Games\\Farm Together\\FarmTogether.exe"')
+            spawn('"D:\\Games\\Farm Together\\FarmTogether.exe"');
+        }
+    },
+    {
+        label: "Abrir Steam",
+        icon: resolve(__dirname, "..", "assets", "iconSteam.png"),
+        click: () => {
+            spawn('C:\\Program Files (x86)\\Steam\\Steam.exe');
         }
     },
     {
@@ -38,21 +45,21 @@ const items = [
                 label: "1920 x 1080",
                 icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
                 click: () => {
-                    spawn('C:\\QRes\\QRes.exe', ['/x:1920 /y:1080'], { shell: true })
+                    spawn('C:\\QRes\\QRes.exe', ['/x:1920 /y:1080'], { shell: true });
                 }
             },
             {
                 label: "1280 x 720",
                 icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
                 click: () => {
-                    spawn('C:\\QRes\\QRes.exe', ['/x:1280 /y:720'], { shell: true })
+                    spawn('C:\\QRes\\QRes.exe', ['/x:1280 /y:720'], { shell: true });
                 }
             },
             {
                 label: "1024 x 768",
                 icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
                 click: () => {
-                    spawn('C:\\QRes\\QRes.exe', ['/x:1024 /y:768'], { shell: true })
+                    spawn('C:\\QRes\\QRes.exe', ['/x:1024 /y:768'], { shell: true });
                 }
             }
         ]
