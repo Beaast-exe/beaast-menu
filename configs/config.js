@@ -31,6 +31,13 @@ const items = [
         }
     },
     {
+        label: 'Fortnite',
+        icon: resolve(__dirname, "..", "assets", "iconFortnite.jpg"),
+        click: () => {
+            spawn('C:\\Games\\Epic Games\\Fortnite\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe');
+        }
+    },
+    {
         label: "Abrir Steam",
         icon: resolve(__dirname, "..", "assets", "iconSteam.png"),
         click: () => {
