@@ -3,18 +3,19 @@ const spawn = require("cross-spawn");
 
 const items = [
     {
-        label: "Riot Games",
-        icon: resolve(__dirname, "..", "assets", "iconRiotGames.png"),
-        submenu: [
-            {
-                label: "League of Legends",
-                icon: resolve(__dirname, "..", "assets", "iconLeagueOfLegends.png"),
-                click: () =>
-                    spawn.sync(
-                        '"C:\\Riot Games\\Riot Client\\RiotClientServices.exe" --launch-product=league_of_legends --launch-patchline=live'
-                    ),
-            }
-        ]
+        label: "League of Legends",
+        icon: resolve(__dirname, "..", "assets", "iconLeagueOfLegends.png"),
+        click: () =>
+            spawn.sync(
+                '"C:\\Riot Games\\Riot Client\\RiotClientServices.exe" --launch-product=league_of_legends --launch-patchline=live'
+            ),
+    },
+    {
+        label: 'Fortnite',
+        icon: resolve(__dirname, "..", "assets", "iconFortnite.jpg"),
+        click: () => {
+            spawn('C:\\Games\\Epic Games\\Fortnite\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe');
+        }
     },
     {
         label: "Brawlhalla",
@@ -31,18 +32,27 @@ const items = [
         }
     },
     {
-        label: 'Fortnite',
-        icon: resolve(__dirname, "..", "assets", "iconFortnite.jpg"),
-        click: () => {
-            spawn('C:\\Games\\Epic Games\\Fortnite\\FortniteGame\\Binaries\\Win64\\FortniteClient-Win64-Shipping.exe');
-        }
+        type: "separator",
     },
     {
-        label: "Abrir Steam",
-        icon: resolve(__dirname, "..", "assets", "iconSteam.png"),
-        click: () => {
-            spawn('C:\\Program Files (x86)\\Steam\\Steam.exe');
-        }
+        label: 'Bibliotecas de Jogos',
+        icon: resolve(__dirname, '..', 'assets', 'iconLibrary.png'),
+        submenu: [
+            {
+                label: 'Steam',
+                icon: resolve(__dirname, "..", "assets", "iconSteam.png"),
+                click: () => {
+                    spawn('C:\\Program Files (x86)\\Steam\\Steam.exe');
+                }
+            },
+            {
+                label: 'Epic Games',
+                icon: resolve(__dirname, '..', 'assets', 'iconEpicGames.png'),
+                click: () => {
+                    spawn('C:\\Program Files (x86)\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe');
+                }
+            }
+        ]
     },
     {
         label: "Alterar Resolução",

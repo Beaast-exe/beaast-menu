@@ -10,8 +10,6 @@ if (app.dock) {
 let tray = null;
 
 let menuTemplate = config;
-console.log(menuTemplate);
-console.log(config);
 
 async function makeItems() {
 	menuTemplate.push(
