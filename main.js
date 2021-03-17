@@ -31,4 +31,8 @@ app.on("ready", async () => {
 	await makeItems();
 	const contextMenu = Menu.buildFromTemplate(menuTemplate);
 	tray.setContextMenu(contextMenu);
+
+	tray.on('click', () => {
+		tray.popUpContextMenu();
+	});
 });
