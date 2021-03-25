@@ -34,6 +34,19 @@ const items = [
     {
         type: "separator",
     },
+	{
+		label: 'Ferramentas de Desenvolvimento',
+		icon: resolve(__dirname, '..', 'assets', 'iconIntellij.png'),
+		submenu: [
+			{
+				label: 'IntelliJ',
+                icon: resolve(__dirname, "..", "assets", "iconIntellij.png"),
+                click: () => {
+                    spawn('C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2020.2.3-2\\bin\\idea64.exe');
+                }
+			}
+		]
+	},
     {
         label: 'Bibliotecas de Jogos',
         icon: resolve(__dirname, '..', 'assets', 'iconLibrary.png'),
