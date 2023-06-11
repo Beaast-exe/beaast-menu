@@ -11,6 +11,14 @@ const items = [
             ),
     },
     {
+        label: "Genshin Impact",
+        icon: resolve(__dirname, "..", "assets", "iconGenshinImpact.jpg"),
+        click: () =>
+            spawn.sync(
+                'C:\\Users\\RafaelF\\Desktop\\Genshin Impact.url'
+            ),
+    },
+    {
         label: 'Aeldra',
         icon: resolve(__dirname, "..", "assets", "iconAeldra.png"),
 		submenu: [
@@ -56,40 +64,6 @@ const items = [
                 icon: resolve(__dirname, "..", "assets", "iconExplorer.png"),
                 click: () => {
                     spawn('explorer', ['D:\\Games\\Metins\\Aeldra\\']);
-                }
-			}
-		]
-    },
-    {
-        label: 'Rubinum',
-        icon: resolve(__dirname, "..", "assets", "iconRubinum.png"),
-		submenu: [
-			{
-				label: 'Abrir',
-				icon: resolve(__dirname, "..", "assets", "iconRubinum.png"),
-                click: () => {
-					spawn('"D:\\Games\\Metins\\Rubinum\\Beta_Patcher.exe"');
-				}
-			},
-			{
-				label: "Alterar Resolução",
-        		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
-        		submenu: [
-            		{
-                		label: "1024 x 768",
-                		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
-                		click: () => {
-							spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\metin2-1024x768.cfg D:\\Games\\Metins\\Aeldra\\metin2.cfg'], { shell: true });
-                    		spawn('C:\\QRes\\QRes.exe', ['/x:1024 /y:768'], { shell: true });
-                		}
-					}
-				]
-			},
-			{
-				label: 'Mostrar na pasta',
-                icon: resolve(__dirname, "..", "assets", "iconExplorer.png"),
-                click: () => {
-                    spawn('explorer', ['D:\\Games\\Metins\\Rubinum\\']);
                 }
 			}
 		]
