@@ -13,10 +13,10 @@ const items = [
     {
         label: "Genshin Impact",
         icon: resolve(__dirname, "..", "assets", "iconGenshinImpact.jpg"),
-        click: () =>
-            spawn.sync(
-                'C:\\Users\\RafaelF\\Desktop\\Genshin Impact.url'
-            ),
+        click: () => {
+			spawn('C:\\QRes\\QRes.exe', ['/x:1024 /y:768'], { shell: true }),
+            spawn('C:\\Users\\RafaelF\\Desktop\\Genshin Impact.url')
+		}
     },
     {
         label: 'Aeldra',
