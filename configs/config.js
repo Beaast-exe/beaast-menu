@@ -19,14 +19,29 @@ const items = [
 		}
     },
     {
-        label: 'Aeldra',
-        icon: resolve(__dirname, "..", "assets", "iconAeldra.png"),
+        label: "Dead by Daylight",
+        icon: resolve(__dirname, "..", "assets", "iconDeadByDaylight.jpg"),
+        click: () => {
+			spawn('C:\\QRes\\QRes.exe', ['/x:800 /y:600'], { shell: true }),
+            spawn('C:\\Users\\RafaelF\\Desktop\\Dead by Daylight.url')
+		}
+    },
+    {
+        label: 'Rubinum',
+        icon: resolve(__dirname, "..", "assets", "iconRubinum.png"),
 		submenu: [
 			{
-				label: 'Abrir',
-				icon: resolve(__dirname, "..", "assets", "iconAeldra.png"),
+				label: 'Abrir Patcher',
+				icon: resolve(__dirname, "..", "assets", "iconRubinum.png"),
                 click: () => {
-					spawn('"D:\\Games\\Metins\\Aeldra\\Aeldra-Patcher.exe"');
+					spawn('"D:\\Games\\Metins\\Rubinum\\RubinumLauncher.exe"');
+				}
+			},
+			{
+				label: 'Abrir Client',
+				icon: resolve(__dirname, "..", "assets", "iconRubinum.png"),
+                click: () => {
+					spawn('"D:\\Games\\Metins\\Rubinum\\rbclient.exe"');
 				}
 			},
 			{
@@ -34,18 +49,10 @@ const items = [
         		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
         		submenu: [
             		{
-                		label: "1600 x 900",
-                		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
-                		click: () => {
-							spawn('copy', ['/Y D:\\Games\\Metins\\Aeldra\\metin2-1600x900.cfg D:\\Games\\Metins\\Aeldra\\metin2.cfg'], { shell: true });
-                    		spawn('C:\\QRes\\QRes.exe', ['/x:1600 /y:900'], { shell: true });
-                		}
-					},
-            		{
                 		label: "1366 x 768",
                 		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
                 		click: () => {
-							spawn('copy', ['/Y D:\\Games\\Metins\\Aeldra\\metin2-1366x768.cfg D:\\Games\\Metins\\Aeldra\\metin2.cfg'], { shell: true });
+							spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\SystemSettings-1366x768.ini D:\\Games\\Metins\\Rubinum\\SystemSettings.ini'], { shell: true });
                     		spawn('C:\\QRes\\QRes.exe', ['/x:1366 /y:768'], { shell: true });
                 		}
 					},
@@ -53,7 +60,7 @@ const items = [
                 		label: "1024 x 768",
                 		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
                 		click: () => {
-							spawn('copy', ['/Y D:\\Games\\Metins\\Aeldra\\metin2-1024x768.cfg D:\\Games\\Metins\\Aeldra\\metin2.cfg'], { shell: true });
+							spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\SystemSettings-1024x768.ini D:\\Games\\Metins\\Rubinum\\SystemSettings.ini'], { shell: true });
                     		spawn('C:\\QRes\\QRes.exe', ['/x:1024 /y:768'], { shell: true });
                 		}
 					}
@@ -63,7 +70,7 @@ const items = [
 				label: 'Mostrar na pasta',
                 icon: resolve(__dirname, "..", "assets", "iconExplorer.png"),
                 click: () => {
-                    spawn('explorer', ['D:\\Games\\Metins\\Aeldra\\']);
+                    spawn('explorer', ['D:\\Games\\Metins\\Rubinum\\']);
                 }
 			}
 		]
