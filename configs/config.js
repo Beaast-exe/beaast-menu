@@ -38,13 +38,6 @@ const items = [
 				}
 			},
 			{
-				label: 'Abrir Client',
-				icon: resolve(__dirname, "..", "assets", "iconRubinum.png"),
-                click: () => {
-					spawn('"D:\\Games\\Metins\\Rubinum\\rbclient.exe"');
-				}
-			},
-			{
 				label: "Alterar Resolução",
         		icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
         		submenu: [
