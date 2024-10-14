@@ -115,6 +115,13 @@ const items = [
                 click: () => {
                     spawn('C:\\QRes\\QRes.exe', ['/x:1600 /y:900 /r:155'], { shell: true });
                 }
+            },
+            {
+                label: "1280 x 960",
+                icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
+                click: () => {
+                    spawn('C:\\QRes\\QRes.exe', ['/x:1280 /y:960 /r:155'], { shell: true });
+                }
             }
         ]
     }
