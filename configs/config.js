@@ -17,15 +17,50 @@ const items = [
     //         spawn('start', ['steam://rungameid/381210'], { shell: true });
     //     }
     // },
+    // {
+    //     label: 'Rubinum',
+    //     icon: resolve(__dirname, '..', 'assets', 'iconRubinum.png'),
+    //     submenu: [
+    //         {
+    //             label: 'Abrir Patcher',
+    //             icon: resolve(__dirname, '..', 'assets', 'iconRubinum.png'),
+    //             click: () => {
+    //                 spawn('"D:\\Games\\Metins\\Rubinum\\RubinumLauncher.exe"')
+    //             }
+    //         },
+    //         {
+    //             label: "Alterar Resolução",
+    //             icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
+    //             submenu: [
+    //                 {
+    //                     label: '2560 x 1440',
+    //                     icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
+    //                     click: () => {
+    //                         spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\SystemSettings-2560x1440.ini D:\\Games\\Metins\\Rubinum\\SystemSettings.ini'], { shell: true });
+    //                         spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
+    //                     }
+    //                 },
+    //                 {
+    //                     label: '2560 x 1440 (Divided)',
+    //                     icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
+    //                     click: () => {
+    //                         spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\SystemSettings-2560x1440-Divided.ini D:\\Games\\Metins\\Rubinum\\SystemSettings.ini'], { shell: true });
+    //                         spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
+    //                     }
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
     {
-        label: 'Rubinum',
-        icon: resolve(__dirname, '..', 'assets', 'iconRubinum.png'),
+        label: 'Origins2',
+        icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
         submenu: [
             {
                 label: 'Abrir Patcher',
-                icon: resolve(__dirname, '..', 'assets', 'iconRubinum.png'),
+                icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
                 click: () => {
-                    spawn('"D:\\Games\\Metins\\Rubinum\\RubinumLauncher.exe"')
+                    spawn('"D:\\Games\\Metins\\Origins2 Rebirth\\Origins Patcher.exe"')
                 }
             },
             {
@@ -36,7 +71,7 @@ const items = [
                         label: '2560 x 1440',
                         icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
                         click: () => {
-                            spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\SystemSettings-2560x1440.ini D:\\Games\\Metins\\Rubinum\\SystemSettings.ini'], { shell: true });
+                            spawn('copy', ['/Y D:\\Games\\Metins\\Origins2 Rebirth\\metin2-2560x1440.cfg D:\\Games\\Metins\\Origins2 Rebirth\\metin2.cfg'], { shell: true });
                             spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
                         }
                     },
@@ -44,7 +79,7 @@ const items = [
                         label: '2560 x 1440 (Divided)',
                         icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
                         click: () => {
-                            spawn('copy', ['/Y D:\\Games\\Metins\\Rubinum\\SystemSettings-2560x1440-Divided.ini D:\\Games\\Metins\\Rubinum\\SystemSettings.ini'], { shell: true });
+                            spawn('copy', ['/Y D:\\Games\\Metins\\Origins2 Rebirth\\metin2-2560x1440-divided.cfg D:\\Games\\Metins\\Origins2 Rebirth\\metin2.cfg'], { shell: true });
                             spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
                         }
                     }

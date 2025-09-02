@@ -20,7 +20,7 @@ async function makeItems() {
 			type: "normal",
 			label: "Fechar Beaast Menu",
 			role: "quit",
-			enabled: true,
+			enabled: true
 		}
 	);
 }
