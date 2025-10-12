@@ -1,5 +1,6 @@
 const { resolve } = require("path");
 const spawn = require("cross-spawn");
+const fs = require('fs');
 
 const items = [
     {
@@ -60,7 +61,7 @@ const items = [
                 label: 'Abrir Patcher',
                 icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
                 click: () => {
-                    spawn('"D:\\Games\\Metins\\Origins2 Rebirth\\Origins Patcher.exe"')
+                    spawn('"D:\\Games\\Metins\\Origins2\\Origins Patcher.exe"')
                 }
             },
             {
@@ -71,7 +72,10 @@ const items = [
                         label: '2560 x 1440',
                         icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
                         click: () => {
-                            spawn('copy', ['/Y D:\\Games\\Metins\\Origins2 Rebirth\\metin2-2560x1440.cfg D:\\Games\\Metins\\Origins2 Rebirth\\metin2.cfg'], { shell: true });
+                            fs.copyFile('D:\\Games\\Metins\\Origins2\\metin2-2560x1440.cfg', 'D:\\Games\\Metins\\Origins2\\metin2.cfg', (err) => {
+                                if (err) throw err;
+                            });
+
                             spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
                         }
                     },
@@ -79,8 +83,11 @@ const items = [
                         label: '2560 x 1440 (Divided)',
                         icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
                         click: () => {
-                            spawn('copy', ['/Y D:\\Games\\Metins\\Origins2 Rebirth\\metin2-2560x1440-divided.cfg D:\\Games\\Metins\\Origins2 Rebirth\\metin2.cfg'], { shell: true });
-                            spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
+                            fs.copyFile('D:\\Games\\Metins\\Origins2\\metin2-2560x1440-divided.cfg', 'D:\\Games\\Metins\\Origins2\\metin2.cfg', (err) => {
+                                if (err) throw err;
+                            });
+
+                            spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: false });
                         }
                     }
                 ]
