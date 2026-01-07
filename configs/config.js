@@ -65,6 +65,13 @@ const items = [
                 }
             },
             {
+                label: 'Abrir Pasta',
+                icon: resolve(__dirname, '..', 'assets', 'iconExplorer.png'),
+                click: () => {
+                    spawn('explorer', ['D:\\Games\\Metins\\Rubinum'])
+                }
+            },
+            {
                 label: "Alterar Resolução",
                 icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
                 submenu: [
