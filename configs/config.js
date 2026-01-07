@@ -94,47 +94,47 @@ const items = [
             }
         ]
     },
-    {
-        label: 'Origins2',
-        icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
-        submenu: [
-            {
-                label: 'Abrir Patcher',
-                icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
-                click: () => {
-                    spawn('"D:\\Games\\Metins\\Origins2\\Origins Patcher.exe"')
-                }
-            },
-            {
-                label: "Alterar Resolução",
-                icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
-                submenu: [
-                    {
-                        label: '2560 x 1440',
-                        icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
-                        click: () => {
-                            fs.copyFile('D:\\Games\\Metins\\Origins2\\metin2-2560x1440.cfg', 'D:\\Games\\Metins\\Origins2\\metin2.cfg', (err) => {
-                                if (err) throw err;
-                            });
+    // {
+    //     label: 'Origins2',
+    //     icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
+    //     submenu: [
+    //         {
+    //             label: 'Abrir Patcher',
+    //             icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
+    //             click: () => {
+    //                 spawn('"D:\\Games\\Metins\\Origins2\\Origins Patcher.exe"')
+    //             }
+    //         },
+    //         {
+    //             label: "Alterar Resolução",
+    //             icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
+    //             submenu: [
+    //                 {
+    //                     label: '2560 x 1440',
+    //                     icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
+    //                     click: () => {
+    //                         fs.copyFile('D:\\Games\\Metins\\Origins2\\metin2-2560x1440.cfg', 'D:\\Games\\Metins\\Origins2\\metin2.cfg', (err) => {
+    //                             if (err) throw err;
+    //                         });
 
-                            spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
-                        }
-                    },
-                    {
-                        label: '2560 x 1440 (Divided)',
-                        icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
-                        click: () => {
-                            fs.copyFile('D:\\Games\\Metins\\Origins2\\metin2-2560x1440-divided.cfg', 'D:\\Games\\Metins\\Origins2\\metin2.cfg', (err) => {
-                                if (err) throw err;
-                            });
+    //                         spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
+    //                     }
+    //                 },
+    //                 {
+    //                     label: '2560 x 1440 (Divided)',
+    //                     icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
+    //                     click: () => {
+    //                         fs.copyFile('D:\\Games\\Metins\\Origins2\\metin2-2560x1440-divided.cfg', 'D:\\Games\\Metins\\Origins2\\metin2.cfg', (err) => {
+    //                             if (err) throw err;
+    //                         });
 
-                            spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: false });
-                        }
-                    }
-                ]
-            }
-        ]
-    },
+    //                         spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: false });
+    //                     }
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
     {
         type: "separator",
     },
