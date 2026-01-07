@@ -54,6 +54,47 @@ const items = [
     //     ]
     // },
     {
+        label: 'Rubinum Classic',
+        icon: resolve(__dirname, '..', 'assets', 'iconRubinumClassic.png'),
+        submenu: [
+            {
+                label: 'Abrir Patcher',
+                icon: resolve(__dirname, '..', 'assets', 'iconRubinumClassic.png'),
+                click: () => {
+                    spawn('"D:\\Games\\Metins\\Rubinum\\RubinumClassicPatcher.exe"')
+                }
+            },
+            {
+                label: "Alterar Resolução",
+                icon: resolve(__dirname, "..", "assets", "iconResolution.png"),
+                submenu: [
+                    {
+                        label: '2560 x 1440',
+                        icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
+                        click: () => {
+                            fs.copyFile('D:\\Games\\Metins\\Rubinum\\SystemSettings-2560x1440.ini', 'D:\\Games\\Metins\\Rubinum\\SystemSettings.ini', (err) => {
+                                if (err) throw err;
+                            });
+
+                            spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
+                        }
+                    },
+                    {
+                        label: '2560 x 1440 (Divided)',
+                        icon: resolve(__dirname, '..', 'assets', 'iconResolution.png'),
+                        click: () => {
+                            fs.copyFile('D:\\Games\\Metins\\Rubinum\\SystemSettings-2560x1440-Divided.ini', 'D:\\Games\\Metins\\Rubinum\\SystemSettings.ini', (err) => {
+                                if (err) throw err;
+                            });
+
+                            spawn('C:\\QRes\\QRes.exe', ['/x:2560 /y:1440 /r:155'], { shell: true });
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         label: 'Origins2',
         icon: resolve(__dirname, '..', 'assets', 'iconOrigins2.png'),
         submenu: [
