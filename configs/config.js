@@ -61,7 +61,7 @@ const items = [
                 label: 'Abrir Patcher',
                 icon: resolve(__dirname, '..', 'assets', 'iconRubinumClassic.png'),
                 click: () => {
-                    spawn('"D:\\Games\\Metins\\Rubinum\\RubinumClassicPatcher.exe"')
+                    spawn('"D:\\Games\\Metins\\Rubinum\\RubinumClassicPatcher.exe"', { shell: true, cwd: 'D:\\Games\\Metins\\Rubinum' });
                 }
             },
             {
